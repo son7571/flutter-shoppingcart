@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SelectorButton extends StatelessWidget {
+  var onClick;
+
+  SelectorButton(this.onClick);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,7 +15,7 @@ class SelectorButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: IconButton(
-        onPressed: () {},
+        onPressed: onClick,
         icon: Icon(Icons.directions_bike),
       ),
     );
